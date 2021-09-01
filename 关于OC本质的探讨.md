@@ -36,30 +36,30 @@ NSObject_IMPL 就是NSObject的内存布局
 
 同样 如果存在多层继承关系 
 @interface KMStudent : KMPerson {
-    @public
-    int _no;
-}
+        @public
+        int _no;
+            }
 结构又是如何呢？
 
 struct KMStudent_IMPL {
-    struct KMPerson_IMPL KMPerson_IVARS;
-    int _no;
-};
+        struct KMPerson_IMPL KMPerson_IVARS;
+        int _no;
+            };
 
 等价于 
 struct KMStudent_IMPL {
-    struct NSObject_IMPL NSObject_IVARS;
-    int _age;
-    int _height;
-    int _no;
+        struct NSObject_IMPL NSObject_IVARS;
+        int _age;
+        int _height;
+        int _no;
 };
 
 也等价于
 struct KMStudent_IMPL {
-    Class isa;
-    int _age;
-    int _height;
-    int _no;
+        Class isa;
+        int _age;
+        int _height;
+        int _no;
 };
 
 问题没解决 新的问题又来了 isa又是什么
