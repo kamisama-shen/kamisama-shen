@@ -24,9 +24,9 @@ struct NSObject_IMPL {
 同样 创建一个继承自NSObject的类 并初始化<br> 
 ```cpp
 @interface KMPerson : NSObject {
-        @public
-        int _age;
-        int _height; 
+    @public
+    int _age;
+    int _height; 
 }
 ```
 转为C++文件后
@@ -57,19 +57,19 @@ struct KMStudent_IMPL {
 等价于 
 ```cpp
 struct KMStudent_IMPL {
-        struct NSObject_IMPL NSObject_IVARS;
-        int _age;
-        int _height;
-        int _no; 
+    struct NSObject_IMPL NSObject_IVARS;
+    int _age;
+    int _height;
+    int _no; 
 };
 ``` 
 也等价于
 ```cpp
 struct KMStudent_IMPL {
-        Class isa;
-        int _age;
-        int _height;
-        int _no;
+    Class isa;
+    int _age;
+    int _height;
+    int _no;
 };
 ```
 
