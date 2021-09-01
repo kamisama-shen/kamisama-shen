@@ -1,7 +1,7 @@
-#关于OC本质的探讨
-
-##问题一、一个NSObject对象占用多少内存？
-
+关于OC本质的探讨
+==
+问题一、一个NSObject对象占用多少内存？
+--
  思考： OC对象在内存中是如何布局的？
  
 OC代码底层实现是C/C++代码
@@ -40,3 +40,27 @@ NSObject_IMPL 就是NSObject的内存布局
     int _no;
 }
 结构又是如何呢？
+
+struct KMStudent_IMPL {
+    struct KMPerson_IMPL KMPerson_IVARS;
+    int _no;
+};
+
+等价于 
+struct KMStudent_IMPL {
+    struct NSObject_IMPL NSObject_IVARS;
+    int _age;
+    int _height;
+    int _no;
+};
+
+也等价于
+struct KMStudent_IMPL {
+    Class isa;
+    int _age;
+    int _height;
+    int _no;
+};
+
+问题没解决 新的问题又来了 isa又是什么
+--
