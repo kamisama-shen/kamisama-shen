@@ -15,11 +15,11 @@ NSObject *obj = [NSObject alloc] init];<br>
 cd到根目录下 终端执行xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc main.m -o main.cpp
 <br> 
 在cpp文件中，<br> 
-...cpp
-struct NSObject_IMPL {<br> 
-    Class isa;<br> 
-};<br> 
-...
+```cpp
+struct NSObject_IMPL {
+    Class isa;
+}; 
+```
 <br> 
 同样 创建一个继承自NSObject的类 并初始化<br> 
 @interface KMPerson : NSObject {<br> 
