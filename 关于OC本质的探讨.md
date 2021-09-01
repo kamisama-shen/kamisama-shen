@@ -76,8 +76,8 @@ struct KMStudent_IMPL {
 问题没解决 新的问题又来了 isa又是什么
 --
 了解isa之前，需要知道OC对象主要分为3种
->> 实例对象  `instance对象`
->> 类对象      `class对象`
+>> 实例对象  `instance对象` <br>
+>> 类对象      `class对象` <br>
 >> 元类对象   `meta-class对象`
 
 `instance对象` 是通过类allco出来的对象，每次调用alloc都会产生新的instance对象
