@@ -111,7 +111,7 @@ p2->_age = 3;
 `class对象`  通过调用实例的class方法 或者object_getClass方法得到的对象就是类对象
 每个类在内存中`有且只有`一个 `class对象`
 `class对象`在内存中主要存储的信息包括
->>isa指针
->>superclass指针
->>类的属性信息（@property）、类的对象方法（instance method）
+>>isa指针<br>
+>>superclass指针<br>
+>>类的属性信息（@property）、类的对象方法（instance method）<br>
 >>类的协议信息（protocal）、成员变量信息（ivar）等
